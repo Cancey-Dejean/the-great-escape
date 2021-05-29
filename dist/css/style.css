@@ -1,0 +1,402 @@
+/******************************
+CMD76
+******************************/
+/**********************
+Global Styles
+**********************/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Tinos:wght@400;700&display=swap");
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/** Fixing bootstrap columns for safari **/
+.row:after,
+.row:before {
+  display: inline-block !important; }
+
+body {
+  color: #fff;
+  font-size: 23px;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins";
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden; }
+
+button {
+  background-color: transparent;
+  border: 0; }
+  button:hover {
+    cursor: pointer; }
+  button:focus {
+    outline: 0; }
+
+a,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+  outline: 0;
+  display: inline-block; }
+
+section {
+  padding: 80px 0; }
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%; }
+
+@media (max-width: 1750px) {
+  .container, nav {
+    max-width: 991px !important; } }
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto; }
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.section-title {
+  font-size: 28px;
+  color: #2dcffc;
+  font-family: "Gilroy Bold";
+  text-transform: capitalize;
+  line-height: 1.2; }
+
+.sub-heading {
+  font-size: 15px;
+  display: inline-block;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9e9230;
+  margin-bottom: 16px; }
+
+strike {
+  color: #797979; }
+
+.img-container {
+  text-align: center; }
+
+.sale-text {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 20px 0;
+  color: #797979; }
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+/* Buttons */
+.btn-prime,
+.btn-prime:link,
+.btn-prime:visited {
+  padding: 20px 45px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  border-radius: 0;
+  display: inline-block;
+  font-size: 18px;
+  vertical-align: middle;
+  font-family: "Gilroy Bold";
+  text-transform: capitalize;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5; }
+
+.btn-prime:hover {
+  opacity: 0.9; }
+
+.btn-prime-dark,
+.btn-prime-dark:focus,
+.btn-prime-dark:hover {
+  border: 2px solid #2dcffc;
+  background-color: #2dcffc;
+  color: #2dcffc; }
+
+.btn-prime-border,
+.btn-prime-border:focus,
+.btn-prime-border:hover {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff; }
+
+.flex-container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto; }
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/******************************
+Fonts
+******************************/
+/******************************
+General
+******************************/
+.bg {
+  position: absolute;
+  left: 0%;
+  width: 0%;
+  height: 100%;
+  background-color: #8c6c79;
+  z-index: -1; }
+
+/******************************
+Navbar
+******************************/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  padding: 0 50px; }
+  .navbar .title {
+    margin-right: 100px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600; }
+  .navbar .categories {
+    margin-right: auto; }
+    .navbar .categories ul li {
+      display: inline-block;
+      padding: 0 30px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500; }
+    .navbar .categories .menu {
+      margin-right: 50px; }
+
+/******************************
+Social Media
+******************************/
+.media {
+  position: absolute;
+  top: 350px;
+  right: -90px;
+  transform: rotate(-90deg); }
+  .media ul li {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px; }
+
+/******************************
+Images
+******************************/
+.img-wrapper01 {
+  position: absolute;
+  top: 120px;
+  left: 200px; }
+  .img-wrapper01 .img01 {
+    background: url("../img/image01.jpg") no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    height: 500px;
+    width: 350px;
+    opacity: 0;
+    animation: image-appear 0.0001s linear forwards;
+    animation-delay: 2.2s; }
+
+.img-wrapper02 {
+  position: absolute;
+  top: 0;
+  left: 650px; }
+  .img-wrapper02 .img02 {
+    background: url("../img/image02.png") no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    height: 100vh;
+    width: 800px;
+    opacity: 0;
+    animation: image-appear 0.0001s linear forwards;
+    animation-delay: 2.4s; }
+
+@keyframes image-appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/******************************
+Blocks
+******************************/
+.block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #a37c8c;
+  animation: block-appear 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 1.5s; }
+
+.img-wrapper02 .block {
+  animation-delay: 1.8s; }
+
+@keyframes block-appear {
+  0% {
+    left: 0;
+    width: 0%; }
+  50% {
+    left: 0;
+    width: 100%; }
+  100% {
+    left: 100%;
+    width: 0%; } }
+
+/******************************
+Text
+******************************/
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  width: 1000px; }
+  .text h1 {
+    font-size: 120px;
+    font-family: "Tinos";
+    font-weight: lighter;
+    letter-spacing: 5px;
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    width: 100%; }
+    .text h1 .hidetext {
+      position: absolute; }
+  .text p {
+    font-size: 40px;
+    font-family: "Tinos";
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: lighter;
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    width: 100%; }
+    .text p .hidetext {
+      position: absolute; }
+
+/******************************
+Desc
+******************************/
+.desc {
+  position: absolute;
+  left: 200px;
+  bottom: 70px;
+  display: flex; }
+  .desc ul {
+    margin-right: 50px; }
+    .desc ul li {
+      font-size: 10px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      border-bottom: 1px solid #fff;
+      margin-bottom: 10px; }
+  .desc p {
+    width: 250px;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 2; }
+
+/******************************
+Scrolldown
+******************************/
+.scrolldown {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  position: absolute;
+  bottom: 110px;
+  left: -60px;
+  transform: rotate(-90deg); }
+  .scrolldown::before {
+    content: "";
+    border: 1px solid #fff;
+    width: 100px;
+    margin: 0 20px 0 0;
+    transform: translateY(-3px);
+    opacity: 0.5;
+    display: inline-block; }
+
+/******************************
+Bottom nav
+******************************/
+.bottomnav {
+  position: absolute;
+  bottom: 30px;
+  right: 50px; }
+  .bottomnav .next {
+    font-size: 10px;
+    letter-spacing: 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+    .bottomnav .next::after {
+      content: "";
+      display: inline-block;
+      border: 1px solid #fff;
+      width: 148px;
+      margin: 0 0 0 20px;
+      transform: translateY(-3px); }
+  .bottomnav .nav {
+    display: flex; }
+  .bottomnav ul {
+    background: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .bottomnav ul li {
+      padding: 30px 20px;
+      font-size: 25px; }
+  .bottomnav .bottomnav-img {
+    background: url("../img/bottomnav-img.jpg") no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    height: 200px;
+    width: 200px; }
